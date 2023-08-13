@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toplu Mesajlaşma Çözümleri ve Ödeme Sistemleri | Figensoft</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        .card {
+            border: 0 !important
+        }
+        .text-image-field {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color:black
+        }
+        .dropdown:hover>.dropdown-menu {
+          display: block;
+        }
+
+        .dropdown>.dropdown-toggle:active {
+            pointer-events: none;
+        }   
+        .dropdown {
+          font-family: Open Sans, sans-serif, Arial, Tahoma;
+          font-size: 16px;
+          
+          background-color: #fff;
+          
+        }
+             
+          ::-webkit-scrollbar {
+            width: 5px;
+          }
+
+          
+          ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+          }
+          
+          
+          ::-webkit-scrollbar-thumb {
+            background: #888; 
+          }
+
+          
+          ::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+          }
+          
+    </style>
+        <div class="d-flex justify-content-end" style="width: 81.5%; ">
+          <button class="btn btn-primary mt-4" type="button" style="--bs-btn-bg: #fff;--bs-btn-border-color:#fff;--bs-btn-color: #1a3761;--bs-btn-hover-bg:#fff;--bs-btn-hover-border-color: #fff;font-size: 13px;font-family: Open Sans, sans-serif, Arial, Tahoma;--bs-btn-padding-x: 0.1rem;">TR</button>
+          <button class="btn btn-primary mt-4" type="button" style="--bs-btn-bg: #fff;--bs-btn-border-color:#fff;--bs-btn-color: #1a3761;--bs-btn-hover-bg:#fff;--bs-btn-hover-border-color: #fff;font-size: 13px;font-family: Open Sans, sans-serif, Arial, Tahoma;--bs-btn-padding-x: 0.1rem;">EN</button>
+        </div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="border-bottom: 1px dashed; background-color: #fff;--bs-bg-opacity: 0;">
+        <div class="container-fluid" style="width: 65%;">        
+          <a class="navbar-brand" href="#">
+            <img src="https://www.figensoft.com/static/img/logo.png" alt="figensoft" style="width: 227px;height: 48px;"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <div class="dropdown">
+                  <button
+                    class="btn btn-primary dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-mdb-toggle="dropdown"
+                    aria-expanded="false"
+                    style="--bs-btn-color: #535353; --bs-btn-bg: #fff;--bs-btn-border-color: #fff;--bs-btn-hover-bg: #fff;--bs-btn-hover-color: #535353;--bs-btn-hover-border-color: #fff;
+                          --bs-btn-active-bg: #fff; --bs-btn-active-border-color: #fff;"
+                  >
+                    Mesajlaşma Servisleri
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: #1A3761; --bs-border-radius: 0; --bs-dropdown-link-hover-bg: #fdc209">
+                    <li><a class="dropdown-item" href="https://www.figensoft.com/urunler/mesajlasma-servisleri/toplu-sms" style="font-size: 14px;font-weight: bold; color: #fff;">Toplu SMS</a></li>
+                    <li><a class="dropdown-item" href="https://www.figensoft.com/urunler/mesajlasma-servisleri/toplu-mms" style="font-size: 14px;font-weight: bold; color: #fff;">Toplu MMS</a></li>
+                    <li><a class="dropdown-item" href="https://www.figensoft.com/urunler/mesajlasma-servisleri/toplu-email" style="font-size: 14px;font-weight: bold; color: #fff;">Toplu Eposta</a></li>
+                    <li><a class="dropdown-item" href="https://www.figensoft.com/urunler/mesajlasma-servisleri/cift-yonlu-sms" style="font-size: 14px;font-weight: bold; color: #fff;">Çift Yönlü SMS</a></li>
+                    <li><a class="dropdown-item" href="https://www.figensoft.com/urunler/mesajlasma-servisleri/mobil-anket" style="font-size: 14px;font-weight: bold; color: #fff;">Anket</a></li>
+                    <li><a class="dropdown-item" href="https://www.figensoft.com/urunler/mesajlasma-servisleri/izinli-pazarlama" style="font-size: 14px;font-weight: bold; color: #fff;">İzinli Pazrlama</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown">
+                  <button
+                    class="btn btn-primary dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-mdb-toggle="dropdown"
+                    aria-expanded="false"
+                    style="--bs-btn-color: #535353; --bs-btn-bg: #fff;--bs-btn-border-color: #fff;--bs-btn-hover-bg: #fff;--bs-btn-hover-color: #535353;--bs-btn-hover-border-color: #fff;
+                          --bs-btn-active-bg: #fff; --bs-btn-active-border-color: #fff;"
+                  >
+                    Ödeme Sistemleri
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: #1A3761; --bs-border-radius: 0; --bs-dropdown-link-hover-bg: #fdc209">
+                    <li><a class="dropdown-item" href="https://www.figensoft.com/urunler/odeme-sistemleri/tiko-cuzdan" style="font-size: 14px;font-weight: bold; color: #fff;">Tiko Cüzdan</a></li>
+                    <li><a class="dropdown-item" href="https://www.figensoft.com/urunler/odeme-sistemleri/tiko-sanal-pos" style="font-size: 14px;font-weight: bold; color: #fff;">Tiko Sanal POS</a></li>
+                    <li><a class="dropdown-item" href="https://www.figensoft.com/urunler/odeme-sistemleri/tiko-taksit" style="font-size: 14px;font-weight: bold; color: #fff;">Tiko Taksit Uygulaması</a></li>
+                    <li><a class="dropdown-item" href="https://www.figensoft.com/urunler/odeme-sistemleri/tiko-link" style="font-size: 14px;font-weight: bold; color: #fff;">Tiko Link</a></li> 
+                  </ul>
+                </div>
+                <div class="dropdown">
+                  <button
+                    class="btn btn-primary dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-mdb-toggle="dropdown"
+                    aria-expanded="false"
+                    style="--bs-btn-color: #535353; --bs-btn-bg: #fff;--bs-btn-border-color: #fff;--bs-btn-hover-bg: #fff;--bs-btn-hover-color: #535353;--bs-btn-hover-border-color: #fff;
+                          --bs-btn-active-bg: #fff; --bs-btn-active-border-color: #fff;"
+                  >
+                    Şireket
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: #1A3761; --bs-border-radius: 0; --bs-dropdown-link-hover-bg: #fdc209">
+                    <li><a class="dropdown-item" href="https://www.figensoft.com/hakkimizda/biz-kimiz" style="font-size: 14px;font-weight: bold; color: #fff;">Hakkımızda</a></li>
+                    <li><a class="dropdown-item" href="https://www.figensoft.com/hakkimizda/medya-merkezi" style="font-size: 14px;font-weight: bold; color: #fff;">Medya Merkezi</a></li>
+                  </ul>
+                </div>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.figensoft.com/referanslar/global-isbirlikleri" style="font-family: Open Sans, sans-serif, Arial, Tahoma; font-size: 16px;color: #535353;">İş Ortaklarımız</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.figensoft.com/referanslar" style="font-family: Open Sans, sans-serif, Arial, Tahoma; font-size: 16px;color: #535353;">Referanslar</a>
+              </li>
+              <div class="dropdown">
+                <button
+                  class="btn btn-primary dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-mdb-toggle="dropdown"
+                  aria-expanded="false"
+                  style="--bs-btn-color: #535353; --bs-btn-bg: #fff;--bs-btn-border-color: #fff;--bs-btn-hover-bg: #fff;--bs-btn-hover-color: #535353;--bs-btn-hover-border-color: #fff;
+                        --bs-btn-active-bg: #fff; --bs-btn-active-border-color: #fff;"
+                >
+                  İletişim
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: #1A3761; --bs-border-radius: 0; --bs-dropdown-link-hover-bg: #fdc209">
+                  <li><a class="dropdown-item" href="https://www.figensoft.com/iletisim/yurtici" style="font-size: 14px;font-weight: bold; color: #fff;">Yurt İçi</a></li>
+                  <li><a class="dropdown-item" href="https://www.figensoft.com/iletisim/yurtdisi" style="font-size: 14px;font-weight: bold; color: #fff;">Yurt Dışı</a></li>
+                </ul>
+              </div>
+            </ul>
+          </div>
+        </div>
+    </nav>
+</head>
+<body>
+    <img src="https://www.figensoft.com/static/img/deloitte-white.webp" class="img-fluid" alt="..." >
+    <!--grid system-->
+    <section class="container">
+          <div class="row justify-content-center" style="margin-top: 100px;">
+            <div class="col-md-6 col-lg-5 mb-4 mb-md-0">
+                <div class="card" >
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 48px; font-weight: bold; color: #1a3761; margin-top: 150px;">
+                            Teknoloji ile daha iyiye
+                        </h5>
+                        <p class="card-text" style="font-size: 16px; color: #535353;">
+                            Mesajlaşma servisleri ve ödeme sistemleri uzmanlığıyla Figensoft, yurtdışı ofisleri ve global alandaki iş ortaklıkları sayesinde dünya çapında hizmet sunmaktadır.
+                        </p>
+                        <a href="https://www.figensoft.com/hakkimizda/biz-kimiz" class="btn btn-primary" style="display: flex; align-items: center; justify-content: center; border-radius: 16px; background-color: #fdc209; color: #1a3761; --bs-btn-border-color: #fdc209; width: 150px; font-weight: bold; font-size: 16px; height: 32px;">Biz Kimiz?</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-5 d-flex align-items-center justify-content-center" style="z-index: 1;">
+                <img class="img-fluid" style="max-width: 90%; height: auto;" src="tiko-gv.gif" alt="sans">
+            </div>
+        </div>
+
+            <style>
+              .custom-margin-left {
+                  margin-left: 90px;
+              }
+              .custom-margin-right {
+                  margin-right: 90px;
+              }
+              .background-container {
+                  position: relative;
+                  overflow: hidden;
+                  margin-top: -750px;
+                  width: 100%; 
+              }
+
+              .background-container::before {
+                  content: "";
+                  position: absolute;
+                  top: 240px;
+                  left: 57px;
+                  width: 90%;
+                  height: 90%;
+                  background-image: url("https://www.figensoft.com/static/img/wireless.webp");
+                  background-size: contain;
+                  background-position: center top;
+                  background-repeat: no-repeat;
+                  
+              }
+
+              .content-container {
+                  padding-top: 780px; 
+              }
+              
+            </style>
+            <div class="background-container">
+              <div class="background-image"></div>
+              <div class="content-container">
+                <div class="container text-center">
+                  <div class="row justify-content-center" style="margin-bottom: 80px; margin-top: 180px;">
+                      <div class="col-md-4 d-flex flex-column align-items-end justify-content-center custom-margin-left">
+                          <div style="font-family: Open Sans, sans-serif, Arial, Tahoma; color: #1A3761; font-size: 48px;">Geçmişten</div>
+                      </div>
+                      <div class="col-md-2 d-flex align-items-center justify-content-center">
+                          <img src="https://www.figensoft.com/static/img/25.webp" class="img-fluid" alt="..." style="z-index: 1;">
+                      </div>
+                      <div class="col-md-4 d-flex flex-column align-items-start justify-content-center custom-margin-right">
+                          <div style="font-family: Open Sans, sans-serif, Arial, Tahoma; color: #1A3761; font-size: 48px; font-weight: bold; font-style: italic;">Geleceğe</div>
+                      </div>
+                  </div>
+              </div>
+              
+              </div>
+            </div>
+      
+      
+      
+
+        <div class="row mt-5" >
+            <div class="col-md-12" style="background-color: #1A3761; height: 100px; display: flex;justify-content: center; align-items: center;width: 90%;">
+                <span style="color:white; font-size:32px;line-height: 32px;font-family: Open Sans, sans-serif, Arial, Tahoma;">Türkiye’nin lider mobil teknoloji firması</span>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card" >
+                    <div class="row card-body" style="margin-top: 60px;  padding: 0 100px;">
+                      <div class="col-sm-6 col-lg-5">
+                        <div style="position: relative; padding-bottom: 100%; overflow: hidden;">
+                            <img src="https://www.figensoft.com/static/img/messaging.webp" alt="sans" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                    
+                       <div class="col-sm-6 col-lg-5" style="margin-left: 150px;">
+                        
+                          <h5 class="card-title" style="font-size: 48px;font-weight: bold;color:#1a3761;line-height: 52px;display: block;height: auto;font-family: Open Sans, sans-serif, Arial, Tahoma;margin-left: 20px; margin-top: 40px;">
+                            Mesajlaşma 
+                            <br>
+                            Servisleri                                      
+                          </h5>
+                           <p class="card-text" style="display: block;height: auto;line-height: 18px;margin-top: 16px;font-family: Open Sans, sans-serif, Arial, Tahoma; font-size: 16px;color: #535353;margin-left: 20px;">
+                            "Türkiye’nin en köklü teknoloji firmalarından biri olan Figensoft, mobil 
+                            teknolojiler alanında yazılım çözümleri üretmek adına çıktığı 
+                            ve ilkleri başardığı yolculuğuna 1997 yılında başladı."
+                            <br>
+                            <br>
+                            "Figensoft, mobil teknolojiler alanındaki deneyimini mesajlaşma servisleri markası “Posta Güvercini”ni kurarak ilklere imza attı. 
+                            Türkiye’nin en eski toplu SMS markası olmasının yanı sıra Posta Güvercini, 
+                            Excel üzerinden dünyada ilk SMS gönderimi ve App Store’lardaki dünyadaki ilk toplu 
+                            SMS uygulaması olma özelliğini taşımaktadır. Toplu SMS, 
+                            MMS, E-posta, İzinli Pazarlama gibi çeşitli mesajlaşma 
+                            ürünlerini bünyesinde barındıran Posta Güvercini, günümüzde 4 
+                            ülkedeki ofisleri ve global GSM operatörleri iş birliğinde dünya çapında hizmet vermektedir."
+                           </p>
+                           
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card" >
+                    <div class="row card-body" style="padding: 0 100px; margin-top: 80px">
+                       <div class="col-sm-6 col-lg-5">
+                          <h5 class="card-title" style="font-size: 48px;font-weight: bold;color:#1a3761;line-height: 52px;display: block;height: auto;font-family: Open Sans, sans-serif, Arial, Tahoma;margin-left: 20px; margin-top: 50px;">
+                            Ödeme
+                            <br> 
+                            Sistemleri
+                          </h5>
+                           <p class="card-text" style="display: block;height: auto;line-height: 18px;margin-top: 16px;font-family: Open Sans, sans-serif, Arial, Tahoma; font-size: 16px;color: #535353;margin-left: 20px;">
+                            Yazılım kökenlilik ve mobil uygulamalar konusundaki yetkinliğini “Ödeme Sistemleri” alanında da gösteren Figensoft, 
+                            2019’dan bu yana TİKO markasıyla hizmet veriyor. Yeni nesil ödeme Sistemi TİKO, 4 farklı modeliyle hem kurumsal hem de bireysel ödeme alma ve 
+                            tahsilat gerçekleştirme çözümleri sunan bir elektronik ödeme altyapı sistemidir.
+                            <br>
+                            <br>
+                            Tiko Cüzdan, Sanal Pos, Taksit ve Link çözümleri sayesinde hızlı ve temassız yöntemler sağlayarak karmaşık ödeme 
+                            süreçlerini sizin için kolaylaştırır.
+                           </p>
+                        </div>
+                        <img class="col-sm-6 col-lg-5" style="margin-left: 150px; margin-top: 60px;" src="https://www.figensoft.com/static/img/payment.webp" alt="sans"/>
+                    </div>
+                </div>
+        </div>
+        
+        <div class="row" >
+          <div class="col-sm-3" style="margin-top: 100px; margin-bottom: 100px; border-right: 1px dashed;">
+            <div class="card text-center d-flex flex-column align-items-center justify-content-center">
+                <img src="https://www.figensoft.com/static/img/achivement.png" alt="achievement" style="pointer-events: none;width: 64px;height: 64px;">
+                <div class="card-body">
+                    <p class="card-text" style="font-size: 1.7rem;font-family: Open Sans, sans-serif, Arial, Tahoma;color: #1A3761;margin-top: 15px;">25 yıllık <br>deneyim</p>
+                </div>
+            </div>
+          </div>        
+          <div class="col-sm-3" style="margin-top: 100px; margin-bottom: 100px; border-right: 1px dashed">
+            <div class="card text-center d-flex flex-column align-items-center justify-content-center">
+                <img src="https://www.figensoft.com/static/img/global.png" alt="global" style="pointer-events: none;width: 64px;height: 64px;">
+                <div class="card-body">
+                    <p class="card-text" style="font-size: 1.7rem;font-family: Open Sans, sans-serif, Arial, Tahoma;color: #1A3761;margin-top: 15px;">4 ülkede lokal <br>ofis</p>
+                </div>
+            </div>
+          </div>
+          <div class="col-sm-3" style="margin-top: 100px; margin-bottom: 100px; border-right: 1px dashed">
+            <div class="card text-center d-flex flex-column align-items-center justify-content-center">
+                <img src="https://www.figensoft.com/static/img/bussiness.png" alt="bussiness" style="pointer-events: none;width: 64px;height: 64px;">
+                <div class="card-body">
+                    <p class="card-text" style="font-size: 1.7rem;font-family: Open Sans, sans-serif, Arial, Tahoma;color: #1A3761;margin-top: 15px;">Global <br>ortaklar</p>
+                </div>
+            </div>
+          </div>
+          <div class="col-sm-3" style="margin-top: 100px; margin-bottom: 100px;">
+            <div class="card text-center d-flex flex-column align-items-center justify-content-center">
+                <img src="https://www.figensoft.com/static/img/hearth.png" alt="hearth" style="pointer-events: none;width: 64px;height: 64px;">
+                <div class="card-body">
+                    <p class="card-text" style="font-size: 1.7rem;font-family: Open Sans, sans-serif, Arial, Tahoma;color: #1A3761;margin-top: 15px;">15.000 mutlu <br>müşteri</p>
+                </div>
+            </div>
+          </div>
+      </div>
+      
+      
+        
+        
+
+      <div class="row">
+        <div class="col-md-12">
+            <div class="text-center" style="font-size: 48px;font-weight: bold;color:#1a3761;line-height: 56px;">Ofislerimiz</div>
+        </div>
+        <div class="row" style="margin-top: 60px; margin-bottom: 60px;">
+            <div class="col-md-3">
+                <a href="https://www.figensoft.com/iletisim/yurtici">
+                    <div class="text-image-field text-center">
+                        <img src="https://www.figensoft.com/static/img/turkey.webp" alt="Türkiye" class="img-fluid" style="width: 180px;height: 180px;">
+                        <div class="centered" style="font-family: Open Sans, sans-serif, Arial, Tahoma; color: #1a3761; font-weight: bold; width: inherit; height: inherit;">Genel Merkez Türkiye</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="https://www.figensoft.com/iletisim/yurtdisi">
+                    <div class="text-image-field text-center">
+                        <img src="https://www.figensoft.com/static/img/cyprus.webp" alt="Kıbrıs" class="img-fluid" style="width: 180px;height: 180px;">
+                        <div class="centered" style="font-family: Open Sans, sans-serif, Arial, Tahoma; color: #1a3761; font-weight: bold; width: inherit; height: inherit;">Kıbrıs</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="https://www.figensoft.com/iletisim/yurtdisi">
+                    <div class="text-image-field text-center">
+                        <img src="https://www.figensoft.com/static/img/azerbaijan.webp" alt="Azerbaycan" class="img-fluid" style="width: 180px;height: 180px;">
+                        <div class="centered" style="font-family: Open Sans, sans-serif, Arial, Tahoma; color: #1a3761; font-weight: bold; width: inherit; height: inherit;">Azerbaycan</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="https://www.figensoft.com/iletisim/yurtdisi">
+                    <div class="text-image-field text-center">
+                        <img src="https://www.figensoft.com/static/img/georgia.webp" alt="Gürcistan" class="img-fluid" style="width: 180px;height: 180px;">
+                        <div class="centered" style="font-family: Open Sans, sans-serif, Arial, Tahoma; color: #1a3761; font-weight: bold; width: inherit; height: inherit;">Gürcistan</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+        </div>
+
+    </section>
+
+</body>
+
+<footer class="text-center text-lg-start text-muted" style="background-color: #0e213d;">
+  
+    <section class="d-flex justify-content-center justify-content-lg-between p-4">
+      
+      <div>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      
+    </section>
+   
+  
+  
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+       
+        <div class="row mt-3">
+         
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3 text-secondary"></i>
+            </h6>
+            <p>
+                <div class="row">
+             <img src="https://www.figensoft.com/static/img/logo-white.png" class="img-fluid" style="height: 36px; width: 174px;">
+
+                </div>
+                <div class="row">
+             <img src="https://www.figensoft.com/static/img/gsma.webp" class="img-fluid mt-4" style="height: 72px; width: 172px; margin-bottom: 18px;">
+
+                </div>
+             <div class="row">
+                <span style="color: white; font-size: 11px;">© Figensoft · Tüm hakları saklıdır</span>
+             </div>
+            </p>
+          </div>
+          
+  
+          
+          <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4" style="margin-top: 40px;">
+           
+            <p style="margin-bottom: 6px;">
+              <a href="#!" class="text-reset" style="color: #fff!important; text-decoration: none;font-size: 14px;font-family: Open Sans, sans-serif, Arial, Tahoma; ">Anasayfa</a>
+            </p>
+            <p style="margin-bottom: 6px;">
+              <a href="https://www.figensoft.com/referanslar" class="text-reset" style="color: #fff!important; text-decoration: none;font-size: 14px;font-family: Open Sans, sans-serif, Arial, Tahoma; ">Referanslar</a>
+            </p>
+            <p style="margin-bottom: 6px;">
+              <a href="https://www.figensoft.com/hakkimizda/biz-kimiz" class="text-reset" style="color: #fff!important; text-decoration: none;font-size: 14px;font-family: Open Sans, sans-serif, Arial, Tahoma; ">Hakkımızda</a>
+            </p>
+            <p style="margin-bottom: 6px;">
+              <a href="https://www.figensoft.com/blog" class="text-reset" style="color: #fff!important; text-decoration: none;font-size: 14px;font-family: Open Sans, sans-serif, Arial, Tahoma; ">Blog</a>
+            </p>
+            <p style="margin-bottom: 6px;">
+              <a href="https://www.figensoft.com/global-sms" class="text-reset" style="color: #fff!important; text-decoration: none;font-size: 14px;font-family: Open Sans, sans-serif, Arial, Tahoma; ">Kampanyalar</a>
+            </p>
+            <p style="margin-bottom: 6px;">
+              <a href="https://www.figensoft.com/iletisim/yurtici" class="text-reset" style="color: #fff!important; text-decoration: none;font-size: 14px;font-family: Open Sans, sans-serif, Arial, Tahoma; ">iletişim</a>
+            </p>
+          </div>
+         
+          <div class="col-md-8 col-lg-6 col-xl-5">
+           
+            <div class="row">
+              <div class="d-flex align-items-center">
+                  <img src="https://www.figensoft.com/static/img/mail.png" class="img-fluid mt-4" style="width: 24px; height: 24px; margin-bottom: 12px; margin-left: 2px;">
+                  <span class="text" style="margin-top: 12px; margin-left: 12px;font-family: Open Sans, sans-serif, Arial, Tahoma;color: #fff;">Bültenimize abone olun!</span>
+              </div>
+            </div>
+            
+            <div class="input-group">
+                <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" placeholder="Email" style="-webkit-box-sizing: border-box;-webkit-border-radius: 24px;height: 32px;">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="button" style="margin-left: 15px; border-radius: 16px; width: 92px; height: 32px; padding: 0; text-align: center; line-height: 32px;background: #fdc209;color: #1A3761;font-weight: bold;">Kaydol</button>
+                </div>
+            </div>
+            <div class="d-flex align-items-center">
+              <input type="checkbox" value="True" style="margin-bottom: 20px;float: left;">
+              <label style="margin-top: 10px; margin-left: 10px; color: #fff; font-size: 11px;line-height: 24px;float: left;width: calc(100% - 50px);font-family: Open Sans, sans-serif, Arial, Tahoma;">
+                Kişisel Verilerin işlenmesine yönelik <a href="https://www.figensoft.com/static/legal/iletisim.pdf" target="_blank">aydınlatma metnine</a> uygun 
+                şekilde kişisel verilerimin işlenmesine ve tarafıma ticari ileti gönderilmesini kabul ediyorum.
+              </label>
+            </div>
+            <div class="row">
+              <div class="d-flex align-items-center">
+                  <img src="https://www.figensoft.com/static/img/like.png" class="img-fluid mt-4" style="width: 24px; height: 24px; margin-bottom: 12px; margin-left: 2px; margin-right: 12px;">
+                  <a href="https://www.facebook.com/figensoft" title="facebook">
+                    <img src="https://www.figensoft.com/static/img/fb.png" class="img-fluid mt-4" style="width: 24px; height: 24px; margin-bottom: 12px; margin-left: 2px;margin-right: 12px">
+                  </a>
+                  <a href="https://www.instagram.com/figensoft" title="instagram">
+                    <img src="https://www.figensoft.com/static/img/instagram.png" class="img-fluid mt-4" style="width: 24px; height: 24px; margin-bottom: 12px; margin-left: 2px;margin-right: 12px">
+                  </a>
+                  <a href="https://www.twitter.com/figensoft" title="twitter">
+                    <img src="https://www.figensoft.com/static/img/twitter.png" class="img-fluid mt-4" style="width: 24px; height: 24px; margin-bottom: 12px; margin-left: 2px;">
+                  </a>
+                  <span class="text" style="margin-top: 12px; margin-left: 12px;font-family: Open Sans, sans-serif, Arial, Tahoma;color: #fff;">Takipte Kalın :)</span>
+              </div>
+            </div>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <style>
+              .ls {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: flex-start;
+                  font-family:Open Sans, sans-serif, Arial, Tahoma;
+                  font-size: 11px;
+                  overflow-x: auto;
+              }
+          
+              .dx {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 4px;
+                  flex-wrap: wrap; 
+              }
+          
+              .ext-link {
+                  display: block;
+                  padding: 10px 0;
+                  color: #fff; 
+              }
+          
+              @media (min-width: 768px) {
+                  .db {
+                      flex-direction: row; 
+                      justify-content: space-between; 
+                      align-items: center;
+                  }
+                  
+              }
+          </style>
+            <div class="Links">
+              <div class="d-flex align-items-center db ls dx">
+                  <a href="https://www.figensoft.com/static/legal/aydinlatma_metni.pdf" title="Aydınlatma Metni" class="ext-link">Aydınlatma Metni</a>
+                  <a href="https://www.figensoft.com/static/legal/kullanim_kosullari.pdf" title="Kullanım Şartları" class="ext-link">Kullanım Şartları</a>
+                  <a href="https://www.figensoft.com/static/legal/gizlilik_sozlesmesi.pdf" title="Gizlilik Sözleşmesi" class="ext-link">Gizlilik Sözleşmesi</a>
+                  <a href="https://www.figensoft.com/static/legal/bilgi_guvenligi_politikasi.pdf" title="Bilgi Güvenliği Politikası" class="ext-link">Bilgi Güvenliği Politikası</a>
+                  <a href="https://www.figensoft.com/static/legal/basvuru_formu.pdf" title="Başvuru Formu" class="ext-link">Başvuru Formu</a>
+                  <a href="https://www.figensoft.com/static/legal/surekliligi.pdf" title="İş Sürekliliği" class="ext-link">İş Sürekliliği</a>
+                  <a href="https://www.figensoft.com/hakkimizda/degerlerimiz" title="Değerlerimiz" class="ext-link" style="margin-right: 380px;">Değerlerimiz</a>
+              </div>
+            </div>
+          </div>
+          
+    </section>
+
+    <section class="d-flex justify-content-center justify-content-lg-between p-4">
+    
+  </footer>
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+</html>
